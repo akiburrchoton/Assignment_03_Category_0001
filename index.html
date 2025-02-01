@@ -31,6 +31,8 @@
         --font-primary: "ADLaM Display", serif;
         --font-secondary: "Sora", serif;
         --container: 1320px;
+        --line-height-title: 70px;
+        --line-height-text: 35px;
       }
     </style>
 
@@ -39,10 +41,10 @@
 
   <body>
     <header>
-      <div class="flex justify-center items-center bg-[#FFF9F4]">
-        <!-- Navbar  -->
+      <!-- Navbar  -->
+      <div class="flex justify-center bg-[#FFF9F4]">
         <div
-          class="container lg:max-w-[--container] navbar font-secondary flex justify-around"
+          class="container lg:max-w-[--container] navbar font-secondary flex justify-between h-18 lg:h-25"
         >
           <div class="navbar-start lg:w-auto">
             <div>
@@ -52,7 +54,7 @@
                   src="assets/logo-header.png"
                   alt=""
                 />
-                <div class="hidden lg:block">
+                <div class="hidden lg:block lg:text-2xl">
                   Browse
                   <span class="text-[--color-accent]"> 4 </span> Pets
                 </div>
@@ -60,7 +62,7 @@
             </div>
           </div>
           <div class="navbar-center hidden lg:flex lg:w-auto">
-            <ul class="menu menu-horizontal px-1">
+            <ul class="menu menu-horizontal px-1 lg:text-xl">
               <li><a class="hover:bg-transparent">Find a pet</a></li>
               <li>
                 <a class="hover:bg-transparent">Breeds</a>
@@ -70,46 +72,48 @@
               </li>
             </ul>
           </div>
-          <div class="navbar-end flex justify-end lg:w-auto">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-18 mr-2 hidden lg:block"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
-              />
-            </svg>
 
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-18 mr-2 hidden lg:block"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-              />
-            </svg>
+          <div class="navbar-end lg:w-auto">
+            <div class="flex justify-end items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-8 mr-2 hidden lg:block"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
+                />
+              </svg>
 
-            <a
-              class="btn btn-outline border-[--color-accent] mr-3 px-6 btn-sm font-normal no-animation hover:bg-transparent hover:text-[--color-text] hidden lg:flex"
-              >Login</a
-            >
-            <a
-              class="btn bg-[--color-accent] border-0 mr-3 px-6 btn-sm font-normal hover:bg-[--color-accent] hidden lg:flex"
-              no-animation
-              >Register</a
-            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-8 mr-2 hidden lg:block"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                />
+              </svg>
+
+              <a
+                class="btn btn-outline border-[--color-accent] mr-3 px-7 py-0 btn-md font-normal lg:text-xl no-animation hover:bg-transparent hover:text-[--color-text] hidden lg:flex no-animation"
+                >Login</a
+              >
+              <a
+                class="btn bg-[--color-accent] border-0 mr-0 px-7 py-0 btn-md font-normal lg:text-xl hover:bg-[--color-accent] hidden lg:flex no-animation"
+                >Register</a
+              >
+            </div>
 
             <!-- Mobile Icon  -->
             <div class="flex justify-end dropdown w-full">
@@ -142,11 +146,30 @@
             </div>
           </div>
         </div>
-
-        <!-- Hero Area  -->
-
-        <section></section>
       </div>
+
+      <!-- Hero Area  -->
+      <section
+        class="container lg:mx-auto mb-400 pl-4 pr-10 pt-8 lg:p-0 h-112 lg:h-[800px] flex items-start bg-[url(./assets/cat-big.png)] bg-contain bg-bottom bg-no-repeat"
+      >
+        <div class="lg:w-1/2 lg:pt-25">
+          <h1
+            class="font-primary text-3xl lg:text-6xl lg:leading-[--line-height-title] mb-4"
+          >
+            Pamper Your Pet, Because They Deserve the Bes
+          </h1>
+          <p
+            class="font-secondary font-normal sm:text-lg lg:text-xl text-[#5c5c5c] lg:leading-[--line-height-text] mb-4 lg:mb-6"
+          >
+            Discover a world of treats, toys, and essentials handpicked for your
+            furry friends. Shop now and make tails wag with joy!
+          </p>
+          <a
+            class="btn bg-[--color-accent] border-0 mr-0 px-7 py-0 btn-md font-normal text-[16px] lg:text-xl hover:bg-[--color-accent] no-animation font-secondary"
+            >Find a pet</a
+          >
+        </div>
+      </section>
     </header>
 
     <main></main>
